@@ -9,7 +9,7 @@ cred = credentials.Certificate(SERVICE_ACCOUNT_PATH)
 firebase_admin.initialize_app(cred)
 
 # The device token you want to send the notification to
-device_token = "YOUR_DEVICE_TOKEN"
+device_token = "f1wXRA_OSa-8KSjM_V_vKY:APA91bEWtM5Oyf8SYiUh7WS54kmxQubl6KWxlTbBaZ6RG6kJcm32vwQjkqKmia60GHDo-quD2NgD72VVdYX9PBsJLv-2yxeR4WaQCozPh0mfLJVVUPIDDWE"
 
 # Create a message payload with a notification and custom data (for routing)
 message = messaging.Message(
@@ -18,7 +18,7 @@ message = messaging.Message(
         body="This is a push notification sent from Firebase using Python!"
     ),
     data={
-        "route": "/details",  # This could be any route your app can navigate to
+        "n_action": "rewards",  # This could be any route your app can navigate to
         "extra_data": "Some additional data here"  # You can add any other custom data you need
     },
     token=device_token,
